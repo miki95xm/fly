@@ -1,0 +1,22 @@
+Q&A:
+
+1av: Yes, it can be improved with more testing / time
+1bi: From my perspective this is open question:
+we could go with neo4j as graph database so we could use graph structure and connections between nodes as fly roots
+or we could think about using posgis for calculating distances between airport on db level or we could combine both of them.
+All 3 options would require more work - create POC and test it with good amount of tests.
+
+1ci: This is complex question as well - I think that we would need to combine multiple approaches into our system.
+Probably the best first step would be to optimize queries and code performance, after that we can add cache services (eg. Redis)
+to improve responses for similar requests. Then there is obvious one - horizontal scaling (adding more servers/machines) and upgrade CPU / memory on all of them.
+
+1cii: We need to think in advance when creating api endpoint or doing some changes in db structure so it would be good to fallow bast practices.
+At some point MVC architecture may not perform well for all cases so it would be good to think about microservices and divide our application in smaller more agile apps.
+
+1ciii:
+Automated build and test run for new merge requests (or commits) -this will allow as to see errors on early stage.
+Implement unit test, functional tests and BDD test to ensure end product is working without errors.
+Add auto scaling or at least think how to approach it in future.
+App performance and error monitoring - eg. sentry.
+
+

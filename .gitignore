@@ -1,0 +1,6 @@
+venv/
+.idea/
+__pycache__
+.env.dev
+sample_tech_test.json
+
